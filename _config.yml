@@ -1,0 +1,48 @@
+# Site Configuration
+# Update these values after cloning this template repository
+title: Graph Technology Developers — Resources
+description: Open source educational resources on graph databases, knowledge graphs, and GNNs.
+lang: en
+
+# GitHub Pages Configuration
+# For project sites: url is https://{username}.github.io, baseurl is /{repository-name}
+# For user/org sites: url is https://{username}.github.io, baseurl is ""
+# GitHub Pages will override these if GitHub Pages is enabled, but set them explicitly for local dev
+url: https://graphtechnologydevelopers.github.io
+baseurl: /gh-pages-template
+
+permalink: /:path/
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Markdown settings
+kramdown:
+  input: GFM
+  hard_wrap: false
+  toc_levels: 2..4
+
+# SEO and Social
+twitter:
+  username: codegraph
+
+# Logo (optional - create this image if needed)
+# logo: /assets/images/social-card.png
+
+# Defaults: make .md files use page layout
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: page
+
