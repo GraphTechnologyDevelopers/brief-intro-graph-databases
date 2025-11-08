@@ -9,7 +9,7 @@ Welcome to the complete guide to graph databases. This book covers everything fr
 
 {% assign chapters = site.chapters | sort: 'order' %}
 {% for ch in chapters %}
-{{ ch.order }}. [{{ ch.title }}]({{ ch.url }})
+{{ ch.order }}. [{{ ch.title }}]({{ ch.url | relative_url }})
 {% endfor %}
 
 ## About This Book

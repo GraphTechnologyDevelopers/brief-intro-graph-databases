@@ -23,7 +23,7 @@ Or jump to a chapter:
 
 {% assign chapters = site.chapters | sort: 'order' | limit: 5 %}
 {% for ch in chapters %}
-- [{{ ch.order }}. {{ ch.title }}]({{ ch.url }})
+- [{{ ch.order }}. {{ ch.title }}]({{ ch.url | relative_url }})
 {% endfor %}
 
 [View all chapters →]({{ "/book" | relative_url }})

@@ -7,11 +7,11 @@
     <nav class="pager">
       {% if prev_i >= 0 %}
         {% assign prev_page = chapters[prev_i] %}
-        <a class="prev" href="{{ prev_page.url }}">← {{ prev_page.title }}</a>
+        <a class="prev" href="{{ prev_page.url | relative_url }}">← {{ prev_page.title }}</a>
       {% endif %}
       {% if next_i < chapters.size %}
         {% assign next_page = chapters[next_i] %}
-        <a class="next" href="{{ next_page.url }}">{{ next_page.title }} →</a>
+        <a class="next" href="{{ next_page.url | relative_url }}">{{ next_page.title }} →</a>
       {% endif %}
     </nav>
   {% endif %}
