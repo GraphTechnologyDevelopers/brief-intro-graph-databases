@@ -1,73 +1,45 @@
 ---
-title: Graph Technology Developers Resources
 ---
 
-Welcome to the Graph Technology Developers educational resources repository.
+Graphs model the interconnected fabric of real-world data—from social ties to supply chains, biological networks to fraud patterns. Traditional databases like RDBMS handle structured rows well, but as relationships proliferate, queries bog down with expensive joins. Graph databases prioritize these connections, delivering fast traversals even in massive, evolving datasets.
 
-This template provides a clean, minimal foundation for publishing technical documentation and educational content with:
+This manual expands on core concepts for developers, blending theory with practical how-tos. Expect deeper dives into modeling, querying, and implementation, with code samples in Cypher and Python, plus Mermaid diagrams for clarity. It's distilled from key sources but written briskly: why graphs outperform alternatives, how to build and query them, and tips for real apps.
 
-- **Mobile-responsive design** that works beautifully on all devices
-- **SEO optimization** for better discoverability
-- **AI-friendly structure** for enhanced readability by AI agents
-- **Code syntax highlighting** for multiple programming languages
-- **Diagram support** via Mermaid.js for technical visualizations
-- **Dark mode** support via `prefers-color-scheme`
-
-## Getting Started
-
-1. Clone or fork this repository
-2. Update `_config.yml` with your repository details:
-   - Set `url` to `https://{username}.github.io`
-   - Set `baseurl` to `/{repository-name}` (or `""` for user/org sites)
-   - Update `title` and `description`
-3. Customize the footer links in `_includes/footer.html` if needed
-4. Add your content as Markdown files in the root or `pages/` directory
-5. Push to GitHub and enable GitHub Pages in your repository settings
-
-## Adding Content
-
-Create new pages by adding `.md` files anywhere in the repository. They'll automatically use the page layout.
-
-Example:
-
-```markdown
----
-title: My New Page
----
-
-# My New Page
-
-Your content here...
-```
-
-## Code Examples
-
-Use code fences for syntax highlighting:
-
-```python
-def hello_graph():
-    print("Hello, Graph World!")
-```
-
-```cypher
-MATCH (n:Person)-[:KNOWS]->(m:Person)
-RETURN n, m
-```
-
-## Diagrams
-
-Use Mermaid for technical diagrams:
+Data explodes, but value lies in links. Spot fraud rings via cycles; recommend via paths. Ignore graphs, and your systems miss hidden insights. Let's build one.
 
 ```mermaid
-graph TD
-    A[Start] --> B{Decision}
-    B -->|Yes| C[Action 1]
-    B -->|No| D[Action 2]
-    C --> E[End]
-    D --> E
+flowchart TD
+    A["Data explosion"] --> B["Connections grow faster"]
+    B --> C["Traditional DBs: join bottlenecks"]
+    C --> D["Graph DBs: native traversals"]
+    D --> E["Unlock insights: fraud, recs, networks"]
 ```
+
+## Start Reading
+
+[**View the complete book →**]({{ "/book" | relative_url }})
+
+Or jump to a chapter:
+
+{% assign chapters = site.chapters | sort: 'order' | limit: 5 %}
+{% for ch in chapters %}
+- [{{ ch.order }}. {{ ch.title }}]({{ ch.url }})
+{% endfor %}
+
+[View all chapters →]({{ "/book" | relative_url }})
+
+## About This Book
+
+This manual covers everything from fundamental graph theory to practical implementation:
+
+- **Why graphs matter** - Understanding when and why to use graph databases
+- **Core concepts** - Nodes, edges, properties, and relationships
+- **Query languages** - Cypher, Gremlin, and SPARQL
+- **Data modeling** - Best practices and common pitfalls
+- **Real-world applications** - Fraud detection, recommendations, network analysis
+- **Popular databases** - Neo4j, OrientDB, Virtuoso, JanusGraph
+- **Getting started** - Hands-on examples with Neo4j
 
 ## Learn More
 
 Visit [Graph Technology Developers](https://graphtech.dev/) for more resources and community discussions.
-

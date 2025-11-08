@@ -1,0 +1,13 @@
+<nav class="book-toc">
+  <h2>Table of Contents</h2>
+  <ul class="toc">
+    {% assign chapters = site.chapters | sort: 'order' %}
+    {% for ch in chapters %}
+      <li class="{% if ch.url == page.url %}active{% endif %}">
+        <a href="{{ ch.url }}">{{ ch.order }}. {{ ch.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+

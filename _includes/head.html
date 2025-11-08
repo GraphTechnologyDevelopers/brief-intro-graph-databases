@@ -4,4 +4,19 @@
 <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}" />
 {% seo %}
 <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    mermaid.initialize({
+      startOnLoad: true,
+      flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true,
+        curve: 'basis',
+        padding: 12,
+        nodeSpacing: 70,
+        rankSpacing: 80
+      }
+    });
+  });
+  </script>
 

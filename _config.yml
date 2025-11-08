@@ -1,7 +1,6 @@
 # Site Configuration
-# Update these values after cloning this template repository
-title: Graph Technology Developers — Resources
-description: Open source educational resources on graph databases, knowledge graphs, and GNNs.
+title: A Brief Introduction to Graph Databases
+description: A comprehensive guide to graph databases for developers, covering theory, modeling, querying, and practical implementation with code samples in Cypher and Python.
 lang: en
 
 # GitHub Pages Configuration
@@ -9,7 +8,7 @@ lang: en
 # For user/org sites: url is https://{username}.github.io, baseurl is ""
 # GitHub Pages will override these if GitHub Pages is enabled, but set them explicitly for local dev
 url: https://graphtechnologydevelopers.github.io
-baseurl: /gh-pages-template
+baseurl: /brief-intro-graph-databases
 
 permalink: /:path/
 markdown: kramdown
@@ -33,6 +32,12 @@ twitter:
 # Logo (optional - create this image if needed)
 # logo: /assets/images/social-card.png
 
+# Collections
+collections:
+  chapters:
+    output: true
+    permalink: /chapters/:name/
+
 # Defaults: make .md files use page layout
 defaults:
   - scope:
@@ -45,4 +50,9 @@ defaults:
       type: "posts"
     values:
       layout: page
+  - scope:
+      path: ""
+      type: chapters
+    values:
+      layout: book
 
